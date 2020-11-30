@@ -46,7 +46,7 @@ firebase
       console.log(querySnapshot.size);
       querySnapshot.forEach(doc => {
         console.log(doc.data());
-        console.log(doc.data().zoom);
+        console.log(doc.data().room);
         console.log(doc.data().checkout);
       });
     });
