@@ -17,10 +17,24 @@ $('#signup-form').submit(function(e){
   console.log("click the submit...");
   var email = document.getElementById("userName");
   var password = document.getElementById("passWord");
-  firebase.auth().createUserWithEmailAndPassword(email,password).then(user =>{
-    console.log("success!");
-  }).catch(error =>{
-    console.log(error.code);
-    console.log(error.message);
-  });
+
+firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .then(success => {
+      // Signed in
+      // ...
+      
+      console.log("You are signed up");
+      let user = firebase.auth().currentUser;
+
+      user.updateProfile({ displayName: "Kyle Barker" });
+      window.location.href = "Login.html";
+    })
+    .catch(error => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(error.code);
+      console.log(errorMessage);
+    });
 });
