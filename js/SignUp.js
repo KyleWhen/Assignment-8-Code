@@ -15,8 +15,8 @@ console.log("start...");
 $('#signup-form').submit(function(e){
   e.preventDefault();
   console.log("click the submit...");
-  var email = "testemail@gmail.com";
-  var password = "testtest";
+  var email = getElementById("userName");
+  var password = getElementById("passWord");
   firebase.auth().createUserWithEmailAndPassword(email,password).then(user =>{
     console.log("success!");
   }).catch(error =>{
