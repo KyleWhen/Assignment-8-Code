@@ -12,12 +12,12 @@ firebase.initializeApp(firebaseConfig);
 
 console.log("start...");
 
-$("#signup-form").submit(function(e) {
+$("#signupform").submit(function(e) {
   e.preventDefault();
   //get the username(email) and password from the form
   // change the following code
-  var email = document.signup-form.userName.value;
-  var password = document.signup-form.passWord.value;
+  var email = document.signupform.userName.value;
+  var password = document.signupform.passWord.value;
   console.log("submit");
 
   // create a user with email address and password
