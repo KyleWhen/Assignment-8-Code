@@ -14,8 +14,8 @@ $("#Login").submit(function(e) {
   e.preventDefault();
 
   // get the username(email) and password from the form
-  var email = document.signup-form.username.value;
-  var password = document.signup-form.password.value;
+  var email = "testemail@gmail.com";
+  var password = "testtest";
   
 
   // sign in
